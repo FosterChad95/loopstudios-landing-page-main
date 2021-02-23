@@ -1,0 +1,55 @@
+.footer {
+  grid-row: 4/-1;
+  grid-column: 1/-1;
+  background-color: $black;
+  margin-top: 5rem;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 5rem;
+  }
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item {
+    font-family: $font-a;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited,
+  &__link {
+    text-decoration: none;
+    outline: none;
+    color: $white;
+  }
+
+  &__copyright {
+    color: $dark-grey;
+    font-size: 1rem;
+    font-family: $font-j;
+
+    @media screen and (max-width: 35em) {
+      margin-left: 2rem;
+    }
+  }
+}

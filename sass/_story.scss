@@ -1,0 +1,51 @@
+.features {
+  grid-row: 2/3;
+  grid-column: 2/7;
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: min-content;
+  padding-top: 10rem;
+
+  @media screen and (max-width: 75em) {
+    grid-template-rows: min-content max-content;
+  }
+  @media screen and (max-width: 56em) {
+    grid-template-columns: 1fr;
+  }
+
+  &__picture {
+    align-self: end;
+
+    & img {
+      @media screen and (max-width: 56em) {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__text {
+    background-color: $white;
+    transform: translateX(-50%);
+    padding: 6rem;
+    width: 150%;
+    align-self: end;
+
+    @media screen and (max-width: 75em) {
+      transform: translateX(0);
+      width: 100%;
+      grid-row: 2/3;
+    }
+
+    @media screen and (max-width: 40em) {
+      font-size: 1rem;
+    }
+
+    & p {
+      color: $dark-grey;
+      line-height: 2;
+      margin-top: 2rem;
+    }
+  }
+}

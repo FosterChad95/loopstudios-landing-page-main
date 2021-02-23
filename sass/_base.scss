@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1 rem == 10px
+}
+
+body {
+  font-size: 1.5rem;
+}
+
+.container {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 80vw minmax(50rem, 80rem) 1fr 20rem;
+
+  @media screen and (max-width: 75em) {
+    grid-template-rows: 80vw minmax(50rem, 100rem) 1fr 20rem;
+  }
+}

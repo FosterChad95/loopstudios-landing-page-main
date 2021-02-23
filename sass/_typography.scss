@@ -1,0 +1,10 @@
+.heading-2 {
+  font-size: 3.5rem;
+  font-family: $font-j;
+  text-transform: uppercase;
+  margin-right: auto;
+
+  @media screen and (max-width: 40em) {
+    font-size: 2.5rem;
+  }
+}
